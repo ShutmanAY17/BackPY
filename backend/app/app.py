@@ -10,7 +10,6 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    import time
     inicio = time.time()
     archivo = request.files['archivo']
     archivo.save(archivo.filename)
